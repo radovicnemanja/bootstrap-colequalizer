@@ -82,15 +82,14 @@
         var _ = this;
         var $win = $(window);
 
-        $win.load(function () {
-            // Run function on window resize
+        $(window).on('load', function () {// Run function on window resize
             $win.on('resize', function () {
                 _.resizeWindow();
             });
             // Run function the first time
             _.resizeWindow();
         });
-
+        
     };
 
     // jQuery Plugin
